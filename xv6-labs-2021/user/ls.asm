@@ -151,8 +151,8 @@ ls(char *path)
  128:	96c50513          	addi	a0,a0,-1684 # a90 <malloc+0x118>
  12c:	00000097          	auipc	ra,0x0
  130:	78e080e7          	jalr	1934(ra) # 8ba <printf>
-      }
       printf("%s %d %d %d\n", fmtname(buf), st.type, st.ino, st.size);
+//      printf("%s %d %d %d\n", (buf), st.type, st.ino, st.size);
     }
     break;
   }
