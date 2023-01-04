@@ -48,7 +48,7 @@ find(char *path, char* name)
     switch(st.type){
         case T_FILE:
             if(strcmp(fmtname(path),name)==0)
-                printf("%s %d %d %l\n", (path), st.type, st.ino, st.size);
+                printf("%s\n", (path));
             break;
 
         case T_DIR:
@@ -70,7 +70,8 @@ find(char *path, char* name)
                 }
 //                printf("buf:%s,name:%s\n",fmtname(buf),name);
                 if(strcmp(fmtname(buf),name)==0)
-                    printf("%s %d %d %d\n", (buf), st.type, st.ino, st.size);
+//                    printf("%s %d %d %d\n", (buf), st.type, st.ino, st.size);
+                    printf("%s\n", (buf));
                 if( strcmp(fmtname(buf),".")!=0 && strcmp(fmtname(buf),"..")!=0 &&st.type==T_DIR){
 //                    printf("buf:%s,name:%s\n",(buf),name);
                     find(buf,name);
