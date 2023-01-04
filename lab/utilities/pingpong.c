@@ -36,6 +36,7 @@ int main(int argc, char *argv[]) {
         close(p2[0]);
         write(p2[1],s,strlen(s));
         close(p2[1]);
+//        if there is not wait(0), the console will print  char '$' into "received pong"
         wait(0);// this sentence is very important!!!
     }
     exit(0);
